@@ -1,0 +1,30 @@
+﻿@model List<university_app.Models.student>
+
+<table cellpadding="0" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>number</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td valign="middle" data-header-title="Date"> <span>@item.ID</span></td>
+                <td valign="middle" data-header-title="Price"><a href="/student/GetDetails/@item.ID">@item.studentname</a></td>
+                <td valign="middle" data-header-title="Supplement">@item.studentnumber</td>
+                <td>
+                    <div class="text-center">
+
+                        <a href="/student/DeleteStudent/@item.ID" class="glyphicon glyphicon-trash"></a>
+
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

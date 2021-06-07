@@ -1,0 +1,62 @@
+﻿@model List<university_app.Models.room>
+
+@Styles.Render("~/university app/")
+    <div class="col-xs-12 col-md-6">
+        @*@Html.ActionLink("Details" ,"getRoomDetails" ,new { @class="btn btn-success"} , new { @id =item.ID })*@
+
+        
+
+    </div>
+    <br />
+    <br />
+<br />
+<br /><br />
+@foreach (var item in Model)
+{
+    <div class="container">
+        
+        <div id="products" class="row list-group">
+            <div class="item  col-xs-4 col-lg-4">
+                <div class="thumbnail">
+                    <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                    <div class="caption">
+                        <h4 class="group inner list-group-item-heading">
+                            Room Name: @item.Roomname
+                        </h4>
+
+                        <h4 class="group inner list-group-item-heading">
+                            Room Location: @item.location
+                        </h4>
+
+                        <h4 class="group inner list-group-item-heading">
+                            Room Size: @item.size
+                        </h4>
+
+                        <h4 class="group inner list-group-item-heading">
+                            Room Availability: @item.isavilable
+                        </h4>
+
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                @*@Html.ActionLink("Details" ,"getRoomDetails" ,new { @class="btn btn-success"} , new { @id =item.ID })*@
+
+                                <a class="btn btn-primary" href="/Room/getRoomDetails/@item.Id">Details</a>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                @*@Html.ActionLink("Details" ,"getRoomDetails" ,new { @class="btn btn-success"} , new { @id =item.ID })*@
+
+                                <a class="btn btn-danger" href="/Room/DeleteRoom/@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+
+
+}
+

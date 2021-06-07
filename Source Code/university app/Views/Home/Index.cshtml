@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    List<university_app.Models.course> searchList = new List<university_app.Models.course>();
+    if (ViewBag.coursesList != null)
+    {
+        searchList = (List<university_app.Models.course>)ViewBag.coursesList;
+    }
+}
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <div>
+        <input type="text" value="" name="query" class="" placeholder="search for anything" />
+        <button type="submit" class="btn btn-success">search</button>
+
+
+    </div>
+}
+<table class="table tab-content">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Teacher ID</th>
+            <th>Room ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (searchList.Any())
+        {
+            foreach (var item in searchList)
+            {
+                <tr>
+                    <td valign="middle" data-header-title="Date"> <span>@item.Id</span></td>
+                    <td valign="middle" data-header-title="Price"><a href="/Courses/CourseDetails/@item.Id">@item.courseName</a></td>
+                    <td valign="middle" data-header-title="Supplement">@item.CourseCode</td>
+                    <td valign="middle" data-header-title="Supplement">@item.TeachId</td>
+                    <td valign="middle" data-header-title="Supplement">@item.RoomId</td>
+
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td>no data</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+

@@ -1,0 +1,24 @@
+﻿@model university_app.Models.course
+
+
+    <form action="">
+        <label for="">Course Id</label>
+        <input type="text" value="@Model.Id" name="" id="" placeholder="name" class="email" disabled>
+
+        <label for="">Course Name</label>
+        <input type="text" value="@Model.courseName" name="" id="" placeholder="name" class="email" disabled>
+        @*@Html.TextBoxFor(model=>Model.teachertname)*@
+
+        <label for="">Course Code</label>
+        <input type="text" value="@Model.CourseCode" name="" id="" placeholder="number" class="pass" disabled>
+
+        <label for="">Course Teacher</label>
+        <input type="text" value="@Model.teacher.teachertname" name="" id="" placeholder="number" class="pass" disabled>
+
+        <label for="">Course Room</label>
+        <input type="text" value="@Model.room.Roomname" name="" id="" placeholder="number" class="pass" disabled>
+
+
+
+
+    </form>

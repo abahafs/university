@@ -1,0 +1,13 @@
+﻿@model university_app.Models.teacher
+
+    <form action="">
+        <label for="">Teacher Id</label>
+        <input type="text" value="@Model.ID" name="" id=""  class="email" disabled>
+
+        <label for="">Teacher Name</label>
+        <input type="text" value="@Model.teachertname" name="" id=""  class="email" disabled>
+        @*@Html.TextBoxFor(model=>Model.teachertname)*@
+
+        <label for="">Teacher Number</label>
+        <input type="number" value="@Model.teachernumber" name="" id=""  class="pass" disabled>
+    </form>

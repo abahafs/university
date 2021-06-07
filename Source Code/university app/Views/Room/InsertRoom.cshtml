@@ -1,0 +1,23 @@
+﻿@using (Html.BeginForm("InsertRoom", "Room", FormMethod.Post))
+
+{
+    <form action="">
+
+        <label for="">Room Name</label>
+        <input type="text" name="Roomname" id="" placeholder="name" class="email" required>
+        @*@Html.TextBoxFor(model=>Model.teachertname)*@
+
+        <label for="">Room Size</label>
+        <input type="number" name="size" min="1" id="" placeholder="Size" class="pass" required>
+
+        <label for="">Location</label>
+        <input type="text" name="location" id="" placeholder="Location" class="pass" required>
+
+        <label for="" style="width:30%;float:left">Availability</label>
+        <input  type="checkbox" class="form-control" style="width:40%;float:right" name="isavilable" > 
+        <br /><hr />
+        <button type="submit" class="btn btn-success">Add Room</button>
+
+    </form>
+
+}

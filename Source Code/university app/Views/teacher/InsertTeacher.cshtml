@@ -1,0 +1,24 @@
+﻿@using (Html.BeginForm("InsertTeacher", "teacher", FormMethod.Post))
+{
+
+
+    <form class="form" action="#">
+        <label for="">Teacher Name</label>
+        <br />
+        <input type="text" name="teachertname" id="" placeholder="name" class="email" required>
+        @*@Html.TextBoxFor(model=>Model.teachertname)*@
+        <br />
+        <label for="">Teacher Number</label>
+        <br />
+        <input type="number" name="teachernumber" id="" placeholder="Number" class="pass" required>
+        
+        <br />
+        <button type="submit" class="btn btn-success">Add Teacher</button>
+
+
+
+
+
+    </form>
+
+}
